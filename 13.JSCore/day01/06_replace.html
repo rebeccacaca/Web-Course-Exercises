@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 删除字符串开头的空格
+            function ltrim(str) {
+                return str.replace(/^\s+/,"");
+            }
+            // 删除字符串结尾的空格
+            function rtrim(str) {
+                return str.replace(/\s+$/,"");
+            }
+            // 删除字符串开头和结尾的空格
+            function trim(str) {
+                return str.replace(/^\s+|\s+$/g,"");
+            }
+            var str = "   day   day   up!   ";
+            console.log(ltrim(str));
+            console.log(rtrim(str));
+            console.log(trim(str));
+        </script>
+    </body>
+</html>
