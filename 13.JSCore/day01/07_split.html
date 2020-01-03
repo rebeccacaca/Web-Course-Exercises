@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //将mail按照 @ 一分为二
+            var mail = "rebecca2155@gmail.com";
+            var arr = mail.split("@");
+            console.log(arr);
+            var uname = arr[0];
+            var domain = arr[1];
+            document.write(`${uname},${domain}`);
+
+            //翻转字符串
+            var str = "helloworld";
+            // 将字符串打散为字符数组
+            var chars = str.split("");
+            console.log(chars);
+            // 翻转字符数组
+            chars.reverse();
+            // 将字符数组中的字母无缝拼接为字符串
+            str = chars.join("");
+            console.log(str);
+
+        </script>
+    </body>
+</html>
