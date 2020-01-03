@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 请用户输入一条消息
+            var input = prompt("请输入一条消息");
+            // 检查消息中是否包含敏感词汇
+            var i = input.search(/([我卧]|wo)\s*([艹草操槽]|cao)/i);
+            // 如果不包含
+            if (i == -1) {
+                // 显示用户输入的信息
+                docuemnt.write(`李然说：${input}`);
+            }else {//否则
+                // 弹出警告
+                alert("包含敏感词，不能发送！");
+            }
+        </script>
+    </body>
+</html>
