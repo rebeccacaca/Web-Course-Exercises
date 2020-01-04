@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <ul id="ulScores">
+            <li>89</li>
+            <li>108</li>
+            <li>77</li>
+            <li>16</li>
+        </ul>
+        <script type="text/javascript">
+            // 将ul中的数字排序后放回ul中
+
+            var html = document.getElementById('ulScores');
+            console.log(html);
+            // 获取ul的内容
+            html = html.innerHTML;
+            console.log(html);
+            // 掐头去尾
+            var scores = html.replace(/^\s*<li>|<\/li>\s*$/g,"");
+            console.log(scores);
+            // 按照/<\/li>\s*<li>/分割开
+            scores = scores.split(/<\/li>\s*<li>/);
+            console.log(scores);
+            // 排序
+            scores.sort(function(a,b) {
+                return b-a;
+            });
+            console.log(scores);
+            // 按照 </li><li>拼接，补上开头和结尾缺失的标签
+            html = `<li>${scores.join("</li><li>")}</li>`;
+            ulScores.innerHTML = html;
+
+        </script>
+    </body>
+</html>
